@@ -1,0 +1,624 @@
+/* You can add global styles to this file, and also import other style files */
+/* Show it is fixed to the top */
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) { 
+    .logo {
+ display: none;
+    }
+
+    .nav-logo {
+        display: none; 
+     }
+
+    .logo-collapse {
+        width: 100%;
+        padding-right: 5%;
+        padding-left: 0%;
+     }
+
+    .menu-row {
+        padding-left: 0%;
+    }
+
+    .dark-row {
+        display: none;
+    }
+    .first-promo-line {
+        font-size:28px;
+        font-weight: 600
+     }
+     
+     .second-promo-line {
+        font-size:22px;
+        font-weight: 200
+    }
+
+    .main-page-sec-line{
+        padding-top:5%;
+    }
+
+    .menu-option {
+        font-size:40px;
+        font-weight:700;
+        padding-top:5%; 
+      }
+
+      .free-advice-btn {
+        padding-right:25%;
+        padding-left:25%;
+        padding-top:5%;
+    }
+
+    .navbar-collapse {
+        height: 700px;
+    }
+
+      .promo-button {
+        text-align: center;
+        padding-top:5%;
+        padding-left: 5%;
+        padding-right: 5%;
+        padding-bottom:5%;   
+          }
+
+    .nav-menu-option {
+        font-size:40px;
+        font-weight:500;   
+        padding-top:7%;
+      }
+      .point-font {
+        font-size : 20px;
+        font-weight: 100;
+    }
+    
+    .light-box-font {
+        font-size : 16px;
+        font-weight: 100;
+    }
+    .md-header {
+        font-weight: 600;
+        font-size: 20px
+    }
+
+    .aboutContent {
+        padding-left: 3%;padding-right: 3%;
+    }
+
+    .spa-content {
+        padding-right:3%;padding-left:3%;
+    }
+
+    .ecomm-text {
+        padding-top:55%;
+         }
+
+    .lg-header {
+        font-weight: 600;
+        font-size: 24px;
+        padding-top: 10px
+    }
+
+    .lg-thin-header {
+        font-size: 30px;
+    }
+
+    .banner-title {
+        font-weight: 600;
+        font-size: 30px;
+        padding-top: 10px
+    }
+
+       
+    .process-banner {
+        padding-left:2%;
+        padding-right:2%;;
+        margin:5%;
+    } 
+
+    .banner-image {
+        width: 95%;
+        padding-left: 30%;
+        padding-right: 25%;
+    }
+   
+    .box-sub-title-text {
+    font-weight: 500;
+    font-size: 14px;
+    }
+
+    .box-content-text {
+        font-weight: 200;
+        font-size: 18px;
+    }
+
+    .rtd-img {
+        z-index: 5;
+        position: block;
+        width:100%;
+        height: 2px;
+        opacity: 0;
+       }
+    
+    .rtd-text {
+        position: block;
+        padding-top:1%;
+        background-image: url("assets/pattern.png");
+        width:100%;
+        z-index: 15;
+       }
+
+       .rtd-row {
+        padding-right:0%;
+        padding-left:0%
+       }
+
+       .portfolio-content {
+        display: none;
+    }
+
+       .rtd-content {
+        padding-left: 5%;
+        padding-right: 5%;
+        padding-bottom: 18px;
+        font-size: 18px;
+       }
+
+       .bundles-row {
+        padding-left: 10%;
+        padding-right: 10%;
+      }
+
+       .rtd-item {
+        padding-right:15%;
+        padding-left:15%;
+        padding-bottom: 5%;
+    }
+
+    .shopify-banner {
+        padding-left: 0%;
+        padding-right: 0%;
+    }
+
+    .rtd-icon {
+        font-size: 70px;
+    }
+
+       .mini-title {
+        font-size: 24px;
+        font-weight: 400;
+    }
+
+    .client-banner {
+        padding:5px;
+    }
+
+    
+.bundleBanner {
+    border:white;
+    border-style: solid;
+    border-width: 15px;
+    background-color:rgba(74, 74, 75, 0.1);
+    padding: 0px;
+    border-radius: 25px;
+}
+
+    .mini-font {
+        font-size: 20px;
+        font-weight: 100;
+    }
+} 
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {  
+   .logo {
+ display: none;
+    }
+
+    .nav-logo {
+        display: none; 
+     }
+
+    .logo-collapse {
+        width: 100%;
+        padding-right: 30%;
+        padding-left: 0%;
+     }
+    .menu-row {
+        padding-left: 0%;
+    }
+
+    .dark-row {
+        display: none;
+    }
+    .first-promo-line {
+        font-size:30px;
+        font-weight: 600
+     }
+
+     .ecomm-text {
+        padding-top:55%;
+         }
+     
+     .second-promo-line {
+        font-size:22px;
+        font-weight: 200
+    }
+
+    .main-page-sec-line{
+        padding-top:5%;
+    }
+
+    .shopify-banner {
+        padding-left: 0%;
+        padding-right: 0%;
+    }
+
+    .promo-button {
+        text-align: center;
+        padding-top:5%;
+        padding-left: 5%;
+        padding-right: 5%;
+        padding-bottom:5%;   
+          }
+
+    .menu-option {
+        font-size:40px;
+        font-weight:700;
+        padding-top:5%;
+      }
+
+      .nav-menu-option {
+        font-size:40px;
+        font-weight:500;   
+        padding-top:7%;
+      }
+
+      .free-advice-btn {
+        padding-right:25%;
+        padding-left:25%;
+        padding-top:5%;
+    }
+
+    .navbar-collapse {
+        height: 700px;
+    }
+
+      .point-font {
+        font-size : 20px;
+        font-weight: 100;
+    }
+    
+    .light-box-font {
+        font-size : 16px;
+        font-weight: 100;
+    }
+    .md-header {
+        font-weight: 600;
+        font-size: 18px
+    }
+
+    .spa-content {
+        padding-right:3%;padding-left:3%;
+    }
+
+    .lg-header {
+        font-weight: 600;
+        font-size: 24px;
+        padding-top: 10px
+    }
+
+    .lg-thin-header {
+        font-size: 35px;
+    }
+
+    .banner-title {
+        font-weight: 600;
+        font-size: 30px;
+        padding-top: 10px
+    }
+
+    .banner-image {
+        width: 95%;
+        padding-left: 30%;
+        padding-right: 25%;
+    }
+    
+    .process-banner {
+        padding-left:2%;
+        padding-right:2%;
+        margin:5%;
+    } 
+
+    .bundles-row {
+        padding-left: 15%;
+        padding-right: 15%;
+      }
+        
+    .box-sub-title-text {
+        font-weight: 500;
+        font-size: 18px;
+    }
+
+    .box-content-text {
+        font-weight: 200;
+        font-size: 20px;
+    }
+
+    .rtd-img {
+        z-index: 5;
+        position: block;
+        width:100%;
+        height: 2px;
+        opacity: 0;
+       }
+    
+    .rtd-text {
+        position: block;
+        padding-top:1%;
+        background-image: url("assets/pattern.png");
+        width:100%;
+        z-index: 15;
+       }
+
+       .rtd-row {
+        padding-right:0%;
+        padding-left:0%
+       }
+
+       .rtd-content {
+        padding-left: 5%;
+        padding-right: 5%;
+        padding-bottom: 18px;
+        font-size: 18px;
+    }
+
+    .portfolio-content {
+        display: none;
+    }
+    
+.bundleBanner {
+    border:white;
+    border-style: solid;
+    border-width: 15px;
+    background-color:rgba(74, 74, 75, 0.1);
+    padding: 0px;
+    border-radius: 25px;
+}
+
+    .rtd-item {
+        padding-right:15%;
+        padding-left:15%;
+        padding-bottom: 5%;
+    }
+
+    .client-banner {
+        padding:5px;
+    }
+
+    .rtd-icon {
+        font-size: 70px;
+    }
+
+    .mini-title {
+        font-size: 24px;
+        font-weight: 400;
+    }
+
+    .mini-font {
+        font-size: 20px;
+        font-weight: 100;
+    }
+} 
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {    
+ .logo {
+     display: none;
+ }
+
+ .nav-logo {
+    display: none; 
+ }
+
+ .logo-collapse {
+    width: 100%;
+    padding-right: 40%;
+    padding-left: 0%;
+ }
+
+ .dark-row {
+    display: none;
+}
+
+
+.bundleBanner {
+    border:white;
+    border-style: solid;
+    border-width: 2px;
+    background-color:rgba(74, 74, 75, 0.1);
+    padding: 0px;
+    border-radius: 25px;
+}
+
+ .menu-row {
+    padding-left: 0%;
+}
+
+.shopify-banner {
+    padding-left: 10%;
+    padding-right: 10%;
+}
+.first-promo-line {
+    font-size:30px;
+    font-weight: 600
+ }
+
+ .dollar-text {
+    letter-spacing: 1px;
+    font-weight: 500;
+    font-size: 28px;
+}
+ 
+ .second-promo-line {
+    font-size:22px;
+    font-weight: 200
+}
+
+.main-page-sec-line{
+    padding-top:5%;
+}
+
+.ecomm-text {
+    padding-top:25%;
+     }
+
+     .promo-button {
+        text-align: center;
+        padding-top:5%;
+        padding-left: 5%;
+        padding-right: 5%;
+        padding-bottom:5%;   
+          }
+
+.menu-option {
+    font-size:16px;
+    font-weight:700;  
+    padding-top:5%;
+  }
+
+  .nav-menu-option {
+    font-size:40px;
+    font-weight:500;   
+    padding-top:7%;
+  }
+  
+  .point-font {
+    font-size : 16px;
+    font-weight: 100;
+}
+
+.light-box-font {
+    font-size : 16px;
+    font-weight: 100;
+}
+.md-header {
+    font-weight: 600;
+    font-size: 20px
+}
+
+.spa-content {
+    padding-right:3%;padding-left:3%;
+}
+
+.bundles-row {
+    padding-left: 0%;
+    padding-right: 0%;
+  }
+
+.free-advice-btn {
+    padding-right:25%;
+    padding-left:25%;
+    padding-top:5%;
+}
+
+.navbar-collapse {
+    height: 700px;
+}
+
+.lg-header {
+    font-weight: 600;
+    font-size: 24px;
+    padding-top: 10px
+}
+
+.lg-thin-header {
+    font-size: 30px;
+}
+
+.banner-title {
+    font-weight: 600;
+    font-size: 24px;
+    padding-top: 10px
+}
+
+.banner-image {
+    padding-left: 25%;
+    padding-right: 25%;
+}
+
+.process-banner {
+    padding:0px;
+    margin:0px;
+} 
+
+.client-banner {
+    padding:5px;
+}
+
+
+.box-sub-title-text {
+    font-weight: 500;
+    font-size: 18px;
+}
+
+.portfolio-content {
+    display: flex;
+}
+
+.box-content-text {
+    font-weight: 200;
+    font-size: 22px;
+}
+
+   .rtd-img {
+    z-index: 5;
+    position: relative;
+    width:100%;
+    height: 100%;
+    opacity: 1;
+   }
+
+    .rtd-text {
+    position: absolute;
+    padding-top:1%;
+    background-image: none;
+    width:100%;
+    z-index: 15;
+   }
+
+   .rtd-row {
+    padding-right:0%;
+    padding-left:0%
+   }
+
+   .rtd-content {
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-bottom: 18px;
+    font-size: 18px;
+}
+
+.rtd-item {
+    padding-right:2%;
+    padding-left:2%;
+    padding-bottom: 2%;
+}
+
+.rtd-icon {
+    font-size: 40px;
+}
+
+.mini-title {
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.mini-font {
+    font-size: 14px;
+    font-weight: 100;
+}
+
+} 
+

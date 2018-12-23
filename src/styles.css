@@ -1,0 +1,442 @@
+/* You can add global styles to this file, and also import other style files */
+/* Show it is fixed to the top */
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+    
+.sub-menu-option {
+    color : #4a4a4b;
+    font-size:18px;
+}
+
+
+.footer-font {
+    font-size : 16px;
+    font-weight: 100;
+    color:#FFFFFF;
+}
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+ .logo {
+     width: 100%;
+     padding-right: 30%;
+     padding-left: 0%;
+     display: flex;
+ }
+
+ .logo-collapse {
+    width: 100%;
+    padding-right: 30%;
+    padding-left: 0%;
+ }
+
+ .dark-row {
+    z-index: 1000;
+    opacity:1;
+    width: 100%;
+    display: flex;
+}
+
+ .nav-logo {
+    width: 100%;
+    padding-right: 25%;
+    padding-left: 0%;
+    display: flex;
+ }
+
+ .bundleBanner {
+    border:white;
+    border-style: solid;
+    border-width: 5px;
+    background-color:rgba(74, 74, 75, 0.1);
+    padding: 0px;
+    border-radius: 25px;
+}
+ .menu-row {
+    padding-left: 0%;
+}
+.first-promo-line {
+    font-size:34px;
+    font-weight: 600
+ }
+
+ .dollar-text {
+    letter-spacing: 1px;
+    font-weight: 500;
+    font-size: 36px;
+}
+
+ .promo-button {
+    padding-top:10px;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom:10px;   
+    display: flex;
+      }
+ 
+ .second-promo-line {
+    font-size:24px;
+    font-weight: 200
+}
+
+.main-page-sec-line{
+    padding-top:0px;
+}
+.menu-option {
+    font-size:16px;
+    font-weight:700;
+    padding-top:0px;   
+  }
+
+  .nav-menu-option {
+    font-size:14px;
+    font-weight:500; 
+    padding-top:7%;  
+  }
+
+  .bundles-row {
+    padding-left: 1%;
+    padding-right: 1%;
+  }
+  
+.point-font {
+    font-size : 18px;
+    font-weight: 100;
+}
+
+.light-box-font {
+    font-size : 24px;
+    font-weight: 100;
+}
+
+.md-header {
+    font-weight: 600;
+    font-size: 24px
+}
+
+.aboutContent {
+    padding-left: 20%;padding-right: 20%;
+}
+
+.spa-content {
+    padding-right:20%;padding-left:20%;
+}
+
+.lg-header {
+    font-weight: 600;
+    font-size: 32px;
+    padding-top: 10px
+}
+
+.lg-thin-header {
+    font-size: 40px;
+}
+
+.banner-title {
+    font-weight: 600;
+    font-size: 28px;
+    padding-top: 10px
+}
+
+.banner-image {
+    width: 100%;
+    padding-left: 30%;
+    padding-right: 30%;
+}
+
+.free-advice-btn {
+    padding-right:0px;
+    padding-left:0px;
+    padding-top:0px;
+}
+
+.navbar-collapse {
+    height: 100%;
+}
+
+.process-banner {
+    padding:0px;
+    margin:0px;
+} 
+
+.box-sub-title-text {
+    font-weight: 500;
+    font-size: 20px;
+}
+
+.box-content-text {
+    font-weight: 200;
+    font-size: 20px;
+}
+
+.client-banner {
+    padding:35px;
+}
+
+.rtd-img {
+    z-index: 5;
+    position: relative;
+    width:100%;
+   }
+
+.rtd-text {
+    position: absolute;
+    padding-top:1%;
+    background-image: none;
+    width:100%;
+    z-index: 15;
+   }
+
+ .rtd-row {
+    padding-right:2%;
+    padding-left:2%
+   }
+
+   .ecomm-text {
+    padding-top:25%;
+     }
+
+   .rtd-content {
+    padding-left: 12%;
+    padding-right: 12%;
+    padding-bottom: 30px;
+    font-size: 20px;
+    }
+
+    .portfolio-content {
+        display: flex;
+    }
+
+    .rtd-item {
+        padding-right:2%;
+        padding-left:2%;
+        padding-bottom: 0%;
+    }
+
+    .shopify-banner {
+        padding-left: 20%;
+        padding-right: 20%;
+    }
+
+    .rtd-icon {
+        font-size: 55px;
+    }
+
+    .mini-title {
+        font-size: 18px;
+        font-weight: 500;
+    }
+
+    .mini-font {
+        font-size: 16px;
+        font-weight: 100;
+    }
+
+} 
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+ .logo {
+     width: 100%;
+     padding-right: 45%;
+     padding-left: 0%;
+     display: flex;
+ }
+
+ .nav-logo {
+    width: 100%;
+    padding-right: 50%;
+    padding-left: 0%;
+    display: flex;
+ }
+ .dark-row {
+     z-index: 1000;
+     opacity:1;
+     width: 100%;
+ }
+ .menu-row {
+    padding-left: 1%;
+}
+.first-promo-line {
+    font-size:50px;
+    font-weight: 600
+ }
+
+ .dollar-text {
+    letter-spacing: 1px;
+    font-weight: 500;
+    font-size: 32px;
+}
+
+ .bundleBanner {
+    border:white;
+    border-style: solid;
+    border-width: 15px;
+    background-color:rgba(74, 74, 75, 0.1);
+    padding: 0px;
+    border-radius: 25px;
+}
+
+.ecomm-text {
+    padding-top:25%;
+     }
+ 
+ .second-promo-line {
+    font-size:30px;
+    font-weight: 200
+}
+
+.main-page-sec-line{
+    padding-top:0px;
+}
+
+.menu-option {
+    font-size:20px;
+    font-weight:700; 
+    padding-top:0px;
+  }
+
+  .free-advice-btn {
+    padding-right:0px;
+    padding-left:0px;
+    padding-top:0px;
+}
+
+.navbar-collapse {
+    height: 100%;
+}
+
+.shopify-banner {
+    padding-left: 20%;
+    padding-right: 20%;
+}
+
+.nav-menu-option {
+    font-size:14px;
+    font-weight:500; 
+    padding-top:7%;  
+  }
+  
+.point-font {
+    font-size : 20px;
+    font-weight: 100;
+}
+
+.promo-button {
+    padding-top:10px;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom:10px;   
+    display: flex;
+      }
+
+ .bundles-row {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+.light-box-font {
+    font-size : 24px;
+    font-weight: 100;
+}
+.md-header {
+    font-weight: 600;
+    font-size: 24px
+}
+
+.aboutContent {
+    padding-left: 20%;padding-right: 20%;
+}
+
+.lg-header {
+    font-weight: 600;
+    font-size: 40px;
+    padding-top: 10px
+}
+
+.lg-thin-header {
+    font-size: 50px;
+}
+
+.banner-title {
+    font-weight: 600;
+    font-size: 36px;
+    padding-top: 10px
+}
+
+.banner-image {
+    width: 100%;
+    padding-left: 30%;
+    padding-right: 30%;
+}
+
+.process-banner {
+    padding:0px;
+    margin:0px;
+} 
+
+.client-banner {
+    padding:35px;
+}
+
+.portfolio-content {
+    display: flex;
+}
+
+.box-sub-title-text {
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.box-content-text {
+    font-weight: 200;
+    font-size: 24px;
+}
+
+.rtd-img {
+    z-index: 5;
+    position: relative;
+    width:100%;
+   }
+
+.rtd-text {
+    position: absolute;
+    padding-top:1%;
+    background-image: none;
+    width:100%;
+    z-index: 15;
+   }
+
+.rtd-row {
+    padding-right:7%;
+    padding-left:7%
+   }
+
+.rtd-content {
+    padding-left: 20%;
+    padding-right: 20%;
+    padding-bottom: 30px;
+    font-size: 26px;
+}
+
+.rtd-item {
+    padding-right:2%;
+    padding-left:2%;
+    padding-bottom: 2%;
+}
+
+.rtd-icon {
+    font-size: 60px;
+}
+
+.mini-title {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.mini-font {
+    font-size: 18px;
+    font-weight: 100;
+}
+
+}
+
+
+

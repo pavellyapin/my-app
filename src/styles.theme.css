@@ -1,0 +1,168 @@
+/* You can add global styles to this file, and also import other style files */
+/* Show it is fixed to the top */
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+.mat-progress-spinner circle, .mat-spinner circle {
+    stroke: #efa937 !important;
+    }
+
+.light-font {
+    color:#FFFFFF !important;        
+ }
+
+ .color-font {
+    color:#efa937 !important;        
+ }
+
+ .dark-font {    
+  color : #4a4a4b !important;
+ }
+
+ .color-theme {
+    background-color:#efa937 !important;
+ }
+
+ .color-theme-opacity {
+    background-color:rgba(247, 206, 148, 0.2);
+ }
+ 
+ .light-theme {
+    background-color:#FFFFFF !important;
+ }
+
+ .standard-theme {
+    background-color:#4a4a4b !important;
+ }
+
+ .standard-theme-opacity {
+    background-color:rgba(74, 74, 75, 0.1) !important;
+ }
+    
+ .point-font {
+    color:#4a4a4b;
+}
+
+.light-box-font {
+    color:#FFFFFF;
+}
+
+a.nostyle:link {
+    text-decoration: inherit;
+}
+
+a.nostyle:visited {
+    text-decoration: inherit;
+    cursor: auto;
+}
+
+.box-title {
+    text-align: center;
+}
+
+::ng-deep div {
+    margin-left: 0px;
+    margin-right: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.col-md-12 {
+    margin-left: 0px;
+    margin-right: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+ .row {
+    margin-left:0px;
+    margin-right:0px;
+ }
+
+ .load-spinner {
+    width: 100%;
+    padding-left:47%;
+    padding-top:10%;
+    padding-bottom:40%;
+ }
+
+ 
+.divider {
+    display:inline;
+    max-width:2px;
+    border-right:1px solid;
+    opacity:0.3;
+    padding-right:30px;    
+}
+
+
+.bottom-line::after {
+    content: '';
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    margin-left: 45%;
+    width: 10%;
+    height: 2px;
+    background:#efa937;
+    transition: width .7s;
+}
+
+.long-bottom-line::after {
+    content: '';
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    margin-left: 30%;
+    width: 40%;
+    height: 2px;
+    background:#efa937;
+    transition: width .7s;
+}
+
+
+button:focus {
+    outline: inherit;
+}
+
+.bundle-list {
+    border-top-color:rgba(74, 74, 75, 0.7);
+    border-top-style: solid;
+    border-width:3px;
+    padding-bottom: 100px
+}
+
+.bundle-desc {
+    padding:5%;
+    border-bottom-color: white;
+    border-bottom-style: solid;
+    border-width:10px;
+}
+
+.bundleItem {
+    border-style:solid;
+    padding:0;
+    background-color: inherit;
+    border-color: white;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    margin: 0px
+}
+
+.starting-at {
+    text-align:right;
+    padding: 0px;
+    font-size:14px;
+    font-weight: 500
+}
+
+.dollar-col {
+    text-align: left;
+    padding: 0px;
+    padding-left: 5%;
+}
+
+.dollar-text {
+    letter-spacing: 1px;
+    font-weight: 500;
+    font-size: 40px;
+}
