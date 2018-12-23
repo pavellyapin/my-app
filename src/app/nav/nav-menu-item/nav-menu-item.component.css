@@ -1,0 +1,39 @@
+.menu-item-container {
+    text-align: center;
+}
+
+.expandMenu {
+    position: absolute;
+    left: 0;
+    z-index: 10; 
+    min-width: 10rem;
+    margin-top: 60px;
+    background-color:rgba(255, 255, 255, 0.9);   
+    text-align: left;
+    list-style: none;   
+    border-radius: .25rem;
+    box-shadow: 1px 1px 1px #888888;
+}                   
+
+.dropdown-item {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid;
+}
+
+a {
+    color : #ffffff;
+}
+
+a:hover {
+    opacity:1;
+    transition: color 0.7s ease;
+    color : #efa937;
+}
+
+.active {    
+    color: #efa937;
+}
+
+
+

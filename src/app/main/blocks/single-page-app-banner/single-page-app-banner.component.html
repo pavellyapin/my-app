@@ -1,0 +1,15 @@
+ <div class = "row" style = "padding-right: 10%;padding-left: 10%;">
+      <div *ngFor = "let banner of spaBanners?.fields.list" class="col-md-4 spaBanner" style = "cursor: pointer;padding-bottom: 4%;" (click) = "navigate()">
+        <div>
+            <div class = "banner-image">
+                <embed *ngIf = "showSVG" type="image/svg+xml" [src]="banner.fields.image?.fields.file.url | imagePipe" />   
+                <img *ngIf = "!showSVG" [src]="banner.fields.image?.fields.file.url | imagePipe" />               
+           </div> 
+           <div class = "box-title">
+              <h1 class="display-4 md-header bottom-line" [innerHTML] = "banner.fields.title | richTextPipe"></h1>
+          </div>
+           <h1 class="display-4 point-font box-title" [innerHTML] = "banner.fields.shortDesc | richTextPipe"></h1>
+        </div>
+       </div>
+      </div>  
+  

@@ -1,0 +1,74 @@
+<div class = "row">
+        <div class = "col-md-6" style = "padding-top:1%;">
+              <h1 class="display-4 box-content-text color-font" style = "padding-left: 20%;">Blog Posts</h1>
+              <h1 class="display-4 box-title lg-thin-header" style = "padding-bottom: 1%;">Insights and Tips</h1>
+        </div>
+        <div class = "col-md-6">
+
+        </div>
+</div>
+<div class="row" style = "padding-left: 10%;padding-right: 10%">
+            <div *ngFor = "let post of blogPosts" class="col-md-4 image" style= "padding-left:5%;padding-right: 5%">
+                <a [routerLink]="'/blog/' + post.fields.name">
+                    <fade-over-image [myImageUrl]="post.fields.banner?.fields.file.url"></fade-over-image>
+                </a>                
+                <div class = "row">
+                                <div class="display-4 md-header" 
+                                [innerHTML] = "post.fields.title | richTextPipe"></div>                        
+                  </div>  
+                      <div class = "row">
+                              <div class="display-4 mini-font" 
+                              [innerHTML] = "post.fields.shortDesc | richTextPipe"></div>                        
+                </div>  
+  
+            </div>
+    </div>
+<div class = "row">
+                <div class = "col-md-12">
+                     <img  src="assets/divider-dark.png" style="width: 100%;">
+                </div>                         
+</div>  
+<div class="standard-theme">
+        
+       <div class = "row bottom-line" style = "padding-left:5%;padding-right:5%;padding-top: 1%;">
+          <div class="col-md-5">
+                 <img style = "width: 60%;padding-left: 20%;" src="assets/footer-splidoo-full-logo.png">
+                 <div style = "padding-left: 15%;padding-right: 15%;padding-top: 2%;">                 
+                 <h1 class="display-4 footer-font" 
+                 [innerHTML] = "footerContent?.fields.leftBox.fields.shortDesc | richTextPipe">
+                 </h1>    
+                 <h1 [innerHTML] = "footerContent?.fields.leftBox.fields.subTitle | richTextPipe" 
+                     class="display-4 footer-font"></h1> 
+                    <div class = "row">
+                     <div *ngFor = "let promise of ourPromises?.fields.list" class = "col-6" style= "padding:10px">
+                            <div class = "row">
+                            <div class = "col-4">
+                                    <i [ngClass] = "promise.fields.fontAwesome"></i>
+                            </div>
+                            <div class = "col-8">
+                                            <h1 [innerHTML] = "promise?.fields.title | richTextPipe" 
+                                                class="display-4 footer-font"></h1>
+                            </div>  
+                        </div>
+                     </div>
+                    </div>
+                   </div>                   
+          </div>
+          <div class="col-md-3">
+            <h1 class="display-4 footer-font color-font" style="font-weight: 500">Did you like our site?</h1>
+               <simple-contact-form></simple-contact-form>     
+          </div>
+          <div class="col-md-4" style = "padding-top: 5%; padding-left:7%;">
+           <h1 class="display-4 footer-font" 
+               [innerHTML] = "footerContent?.fields.rightBox.fields.content | richTextPipe"></h1> 
+           <div style = "display: inline" class = "color-font">
+                        <app-social></app-social>
+          </div>  
+          </div>
+       </div>
+       <div class = "row">
+                <div class="col-md-12" style = "text-align: center;padding-bottom: 5%;">
+                    <h1 class="display-4 footer-font">© Copyright Splidoo Creative Agency. 2018. All rights reserved. | <a [routerLink]="'/terms/'" class = "nostyle color-font">Terms & Conditions</a></h1>
+                </div>
+       </div>
+    </div>

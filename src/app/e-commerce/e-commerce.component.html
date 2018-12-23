@@ -1,0 +1,79 @@
+<div *ngIf="loading" class = "load-spinner">
+    <mat-spinner ></mat-spinner>
+ </div> 
+ <div  [hidden]="loading" >         
+        <div class = "ecomm-text light-font" [@showText] = "state"> 
+                <div  class = "row">
+                    <div class = "col-md-12" >
+                       <h1 class="display-4 first-promo-line" [innerHTML] = "eCommercePageContent?.fields.promo.fields.title | richTextPipe"></h1> 
+                    </div> 
+                </div>
+                <div class = "row">
+                <div class = "col-md-12" >
+                        <h1 class="display-4 second-promo-line dark-font"  style = "font-weight: 500"
+                        [innerHTML] = "eCommercePageContent?.fields.promo.fields.subTitle | richTextPipe"></h1>  
+                                </div>
+                </div>
+        </div>
+         <div>
+              <img *ngIf="!showMobile" [src]="eCommercePageContent?.fields.promo?.fields.image.fields.file.url | imagePipe" class="main-image" (load)="onLoad()">
+              <img *ngIf="showMobile" [src]="eCommercePageContent?.fields.promo?.fields.mobileImage.fields.file.url | imagePipe" class="main-image" (load)="onLoad()">            
+         </div> 
+  </div>    
+    <div class = "row" >
+      <div class = "col-md-12" style = "padding-top: 1%;padding-bottom: 1%;">
+               <h1 [innerHTML] = "eCommercePageContent?.fields.firstBox.fields.subTitle | richTextPipe" 
+                    class="display-4 box-content-text color-font" style = "padding-left: 20%;"></h1>
+               <h1 [innerHTML] = "eCommercePageContent?.fields.firstBox.fields.title | richTextPipe" 
+                    class="display-4 box-title lg-thin-header" style = "padding-bottom: 1%;"></h1>
+              <h1  [innerHTML] = "eCommercePageContent?.fields.firstBox.fields.content | richTextPipe" 
+                    class="display-4 box-content-text spa-content"></h1>
+      </div>
+    </div> 
+
+    <service-bundles></service-bundles>
+    <div class = "row">
+                <div class = "col-md-12 light-font standard-theme box-title">
+                    <h1 class="display-4 lg-header" 
+                    [innerHTML] = "eCommercePageContent?.fields.stageBanners.fields.title | richTextPipe"></h1>
+                    <h1 class="display-4 box-sub-title-text color-font bottom-line" 
+                    [innerHTML] = "eCommercePageContent?.fields.stageBanners.fields.subTitle | richTextPipe"></h1>                                    
+                </div>
+        </div>
+   <four-stage-banner></four-stage-banner> 
+    <app-shopify [pageContent]='eCommercePageContent' ></app-shopify>
+    <div class = "row" >
+        <div class = "col-md-12" style = "padding-top: 1%;padding-bottom: 3%;">
+                 <h1 [innerHTML] = "eCommercePageContent?.fields.seo.fields.subTitle | richTextPipe" 
+                      class="display-4 box-content-text color-font" style = "padding-left: 20%;"></h1>
+                 <h1 [innerHTML] = "eCommercePageContent?.fields.seo.fields.title | richTextPipe" 
+                      class="display-4 box-title lg-thin-header" style = "padding-bottom: 1%;"></h1>
+                <h1  [innerHTML] = "eCommercePageContent?.fields.seo.fields.content | richTextPipe" 
+                      class="display-4 box-content-text spa-content"></h1>
+        </div>
+      </div>
+      <div class = "row box-divider">
+          <div class = "col-md-12">
+                   <img  src="assets/divider-01.png" style="width: 100%;">
+          </div>                         
+  </div>
+ <div class = "row">
+          <div class = "col-md-12 color-font standard-theme box-title">
+              <h1 [innerHTML] = "eCommercePageContent?.fields.seoHelp.fields.title | richTextPipe" class="display-4 md-header"></h1>                                     
+          </div>                
+           <div class = "col-md-12 light-font standard-theme box-title">
+              <h1 [innerHTML] = "eCommercePageContent?.fields.seoHelp.fields.subTitle | richTextPipe" class="display-4 lg-header"></h1>                                     
+           </div> 
+          <div class = "col-md-12 light-font standard-theme aboutContent spa-content">
+                  <h1 [innerHTML] = "eCommercePageContent?.fields.seoHelp.fields.content | richTextPipe" class="display-4 box-content-text"></h1>                                     
+          </div>
+          <div class = "col-md-12 light-font standard-theme spa-content" style = "padding-bottom:5%;padding-top:1%;">                  
+                         <div class = "row" *ngFor = "let help of seoHelp?.fields.list" style = "padding-bottom:1%;">
+                                 <div class = "col-1" style = "text-align: right;">
+                                          <i [ngClass] = "help.fields.fontAwesome"></i>
+                                  </div>
+                                  <div class = "col-11 box-content-text" [innerHTML] = "help.fields.title | richTextPipe">                                      
+                                  </div>
+                        </div>  
+                    </div>
+  </div> 

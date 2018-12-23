@@ -1,0 +1,46 @@
+<nav class="navbar navbar-expand-lg sticky-bar fixed-top standard-theme light-font" style = "padding-bottom:4px;padding-top:4px;">
+                
+        <div            class="col-md-12 navbar-toggler"
+                                data-toggle="collapse" 
+                                data-target="#navbarCollapseNav">
+                        <div class = "row">
+                                <div class = "col-6">
+                                                <img class = "logo-collapse" src="assets/splidoo-full-logo-dark.png" >
+                                </div>
+                                <div class = "col-6" style = "text-align:right;padding-top:3%;" (click) = "toggleMenu()">
+                                        <i class="fa fa-bars fa-1x social-item"></i>  
+                        </div>
+                        </div>        
+                 </div>                 
+        
+                 <div class = "row  collapse navbar-collapse my-nav-nav"  id="navbarCollapseNav">
+                <div class="col-md-2">
+                        <a [routerLink]="'/main/'">
+                           <img class = "nav-logo" src="assets/splidoo-full-logo-dark.png">
+                        </a>
+
+                </div>
+                <div class="col-md-2" style = "padding:0px;">
+                    <div>
+                       <app-social></app-social>
+                    </div>
+                </div>
+                <div class="col-md-8">
+                        <div class="row main-nav-row">
+                                        <div *ngFor="let menuItem of filteredMenuItems" class = "col-md-2">                
+                                                        <nav-menu-item [menuItem]='menuItem'></nav-menu-item>
+                                        </div>
+                                <div class="col-md-2 free-advice-btn">
+                                                <button mat-stroked-button
+                                                class="color-theme"
+                                                [routerLink]="'/contact/'"
+                                                style = "border-radius:5px;border-style: none">                           
+                                                       <div class="banner-text color-theme light-font">
+                                                         <i class = "fa fa-hand-peace-o" style = "padding-right: 5px;font-size: 14px"></i>
+                                                         Free Advice</div>                                
+                                                </button>  
+                                </div>
+                        </div>
+                </div>
+        </div>
+</nav>

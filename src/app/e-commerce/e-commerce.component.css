@@ -1,0 +1,23 @@
+.spaBanner {
+    border-right:#efa937;
+    border-right-style: solid;
+    border-width: 5px;
+    background-color:rgba(247, 206, 148, 0.2);
+}
+
+.banner-image {
+    padding-left: 35%;
+    padding-right: 35%;
+}
+
+.main-image {
+    z-index: 1;
+    position: relative;
+    width:100%;
+ }
+.ecomm-text {
+   z-index: 3;
+   position: absolute;
+   padding-left: 50px;
+   width:100%;
+    }

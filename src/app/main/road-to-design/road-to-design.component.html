@@ -1,0 +1,27 @@
+<div *ngIf = "componentsOfApp" class = "row" class = "rtd-text">
+<div class = "col-md-12" style = "padding-bottom: 2%;">
+    <div style = "text-align: center;">                              
+        <div style="width: 100%; padding-top:1%;" >
+          <h1 [innerHTML] = "pageContent?.fields.roadToDesign.fields.title | richTextPipe" 
+              class="display-4 lg-header light-font"></h1>
+          <h1 [innerHTML] = "pageContent?.fields.roadToDesign.fields.subTitle | richTextPipe" 
+              class="display-4 md-header light-font" style = "padding-bottom: 20px;"></h1>
+          <h1 [innerHTML] = "pageContent?.fields.roadToDesign.fields.content | richTextPipe" 
+              class="display-4 rtd-content light-font"></h1> 
+          <div class = "row rtd-row">
+               <div *ngFor = "let component of componentsOfApp?.fields.list" 
+                     class = "col-md-3 rtd-item"
+                     [ngClass] = "component.fields.order + '-item'"
+                     style = "opacity:0;top:-50px">
+                     <i [ngClass] = "component.fields.fontAwesome"></i>
+                     <h1 class="display-4 mini-title light-font" [innerHTML] = "component.fields.title | richTextPipe" ></h1>
+                     <h1 class="display-4 mini-font light-font" [innerHTML] = "component.fields.shortDesc | richTextPipe"></h1>    
+               </div>   
+          </div>
+        </div>                                  
+     </div>
+    </div>
+  </div>
+  <div >              
+      <img  [src]="pageContent?.fields.roadToDesign.fields.image?.fields.file.url | imagePipe" class = "rtd-img"/>    
+</div>

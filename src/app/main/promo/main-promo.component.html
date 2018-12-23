@@ -1,0 +1,28 @@
+
+<div *ngIf="loading" class = "load-spinner">
+   <mat-spinner ></mat-spinner>
+</div> 
+<div  [hidden]="loading">           
+        <div class = "main-text light-font" [@showText] = "state"> 
+                <div  class = "row"> 
+                    <div class = "col-md-12 main-page-sec-line">
+                       <h1 class="display-4 first-promo-line" [innerHTML] = "pageContent?.fields.promo.fields.title | richTextPipe"></h1> 
+                    </div> 
+                </div>
+                <div class = "row">
+                <div class = "col-md-12 main-page-sec-line" style = "padding-left:5%;">
+                        <h1 class="display-4 second-promo-line" [innerHTML] = "pageContent?.fields.promo.fields.subTitle | richTextPipe"></h1>  
+                                </div>
+                </div>
+                <div class = "row" style = "padding-top:2%;">
+                        <div  style = "cursor: pointer;min-width: 100px;"
+                             (click) = "onClick()">
+                            <h1 class="display-4 light-box-font promo-button standard-theme">Our Services</h1>                                    
+                        </div>
+                </div>
+        </div>
+        <div >
+                <img *ngIf = "!showMobile" [src]="pageContent?.fields.promo.fields.image.fields.file.url | imagePipe" class="main-image" (load)="onLoad()"> 
+                <img *ngIf = "showMobile"[src]="pageContent?.fields.promo.fields.mobileImage.fields.file.url | imagePipe" class="main-image" (load)="onLoad()"> 
+        </div>
+    </div>

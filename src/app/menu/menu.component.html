@@ -1,0 +1,61 @@
+<nav class="navbar navbar-expand-lg" style = "display: block">
+    <div class="row dark-row light-font standard-theme"> 
+                <app-social></app-social>
+             <i class="fa fa-envelope fa-1x social-item"></i>
+            <h1 class="display-4 social-item dark-row-text">hello@splidoo.com</h1>  
+    </div>
+    <div class="row light-row" style = "width: 100%;">
+
+    <div class="row">
+                   <div         class="col-md-12 navbar-toggler"
+                                data-toggle="collapse" 
+                                data-target="#navbarCollapse" 
+                                aria-controls="navbarCollapse">
+                                        <div class = "row">
+                                                <div class = "col-6">
+                                                                <img class = "logo-collapse" src="assets/splidoo-full-logo-01.png" >
+                                                </div>
+                                                <div class = "col-6" style = "text-align:right;padding-top:3%;" (click) = "toggleMenu()">
+                                                                <i class="fa fa-bars fa-1x social-item"></i>  
+                                                </div>
+                                        </div>
+                                
+                                                      
+                    </div> 
+        <div class = "row  collapse navbar-collapse my-nav-menu"  id="navbarCollapse">
+        <div class="col-md-3">
+                <a [routerLink]="'/main/'">
+                    <img class = "logo" src="assets/splidoo-full-logo-01.png">
+                </a>
+       </div>
+       <div class="col-md-9" style = "padding-right:0px;padding-left:0px"> 
+           <div class = "row menu-row">
+                <div class = "col-md-10">
+                        <div class = "row" >
+                        <div class = "col-md-2">
+                        </div>
+                              <div *ngFor="let menuItem of filteredMenuItems" class = "col-md-2">                
+                                          <menu-item [menuItem]='menuItem'></menu-item>
+                               </div>
+                        </div>
+                </div>
+
+                <div class="col-md-2 free-advice-btn"> 
+                                <button mat-stroked-button
+                                [routerLink]="'/contact/'" 
+                                class="color-theme"
+                                (click) = "clickEvent()"
+                                style = "border-radius:5px;border-style: none;width: 100%;">                           
+                                       <div class="banner-text color-theme light-font">                                                
+                                        <span class = "menu-option" style = "font-size: 14px">
+                                        <i class = "fa fa-bookmark" style = "padding-right: 3px;font-size: 14px"></i>                                         
+                                         Get Free Advice</span></div>                                
+                                </button>                                    
+                </div>                                                             
+           </div>                     
+      
+    </div>
+    </div>    
+  </div>
+</div>
+</nav>

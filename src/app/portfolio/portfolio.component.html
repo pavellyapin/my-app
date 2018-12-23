@@ -1,0 +1,82 @@
+<div *ngIf="loading" class = "load-spinner">
+                <mat-spinner ></mat-spinner>
+             </div> 
+             <div  [hidden]="loading"> 
+                    <div class = "main-text light-font" [@showText] = "state"> 
+                            <div  class = "row">
+                                <div class = "col-md-12 box-title" >
+                                   <h1 class="display-4 first-promo-line" [innerHTML] = "portfolioPageContent?.fields.promo.fields.title | richTextPipe"></h1> 
+                                </div> 
+                            </div>
+                            <div class = "row">
+                                <div class = "col-md-12 box-title" >
+                                        <h1 class="display-4 second-promo-line"  style = "font-weight: 500"
+                                        [innerHTML] = "portfolioPageContent?.fields.promo.fields.subTitle | richTextPipe"></h1>  
+                                </div>
+                            </div>
+                            <div class = "row portfolio-content">
+                                    <div class = "col-md-12 box-title" style = "padding-left:15%;padding-right: 15%;padding-top: 5%;">
+                                            <h1 class="display-4 second-promo-line"  style = "font-weight: 200"
+                                            [innerHTML] = "portfolioPageContent?.fields.promo.fields.content | richTextPipe"></h1>  
+                                    </div>
+                            </div>
+                    </div>
+                     <div >
+                          <img  [src]="portfolioPageContent?.fields.promo?.fields.image.fields.file.url | imagePipe" class="main-image" (load)="onLoad()">            
+                     </div>
+              </div>
+
+<div class = "row" style = "padding-top: 1%;">
+        <div class = "col-md-6">
+            <div class = "row">
+                    <div class = "col-4 client-banner" *ngFor = "let client of firstRowClients">
+                            <fade-over-image 
+                            (click) = 'getClient(client?.fields.associate?.fields.name)'                
+                            [myImageUrl]="client?.fields.associate?.fields.image?.fields.file.url"></fade-over-image>  
+                    </div> 
+            </div>                           
+          </div>
+          <div class = "col-md-6">
+                <div class = "row">
+                <div class = "col-4 client-banner" *ngFor = "let client of secondRowClients">
+                        <fade-over-image 
+                        (click) = 'getClient(client?.fields.associate?.fields.name)'                
+                        [myImageUrl]="client?.fields.associate?.fields.image?.fields.file.url"></fade-over-image>  
+                </div>                   
+            </div>                         
+          </div>
+</div>
+
+<div class = "row" style = "min-height: 600px;">
+                <div class = "col-md-5" style = "padding:0%;">
+                    <div class = "client-text" [@clientAnimation] = "clientState" style = "opacity:0;">
+                         <h1 [innerHTML] = "currentClient?.fields.title | richTextPipe"
+                                class="display-4 box-content-text color-font" 
+                                [ngClass] =  'currentClient?.fields.name'
+                                style = "padding-left: 20%;"></h1>
+                         <h1 [innerHTML] = "currentClient?.fields.subTitle | richTextPipe" 
+                                class="display-4 box-title lg-thin-header" style = "padding-bottom: 1%;"></h1>
+                         <h1 [innerHTML] = "currentClient?.fields.shortDesc | richTextPipe"  
+                                class="display-4 box-content-text bottom-line" 
+                                [ngClass] =  "'bottom-line-' + currentClient?.fields.name"
+                                style = "padding-right:20%;padding-left:20%;"></h1>
+                         <ul class="list-group list-group-flush">
+                                <li *ngFor = "let point of currentClient?.fields.list" class="list-group-item point-font" style = "border-style:none;padding-top:0;"> 
+                                       <div class = "row">
+                                           <div class = "col-2" style = "text-align: right">
+                                                 <i [ngClass]="point.fields.fontAwesome"></i>
+                                           </div>
+                                           <div class = "col-10" [innerHTML] = "point.fields.title | richTextPipe" style = "padding:0%;">
+                                           </div>
+                                       </div>                        
+                                </li>
+                            </ul>
+                    </div>
+                                   
+                </div>
+                <div class = "col-md-7">
+                         <img [@clientAnimation] = "clientState" class = "client-image" [src]="currentClient?.fields.image?.fields.file.url | imagePipe" style = "width: 100%;opacity:0;"/>
+                </div>
+            </div> 
+                           
+            

@@ -1,0 +1,65 @@
+   
+<div class = "row" style = "padding-right: 5%;padding-left: 5%; padding-top: 10%;">
+               <div class="col-md-4 bundleBanner">
+                      <div class = "bundle-img banner-image"> 
+                          <img [src]="bundle.fields.image?.fields.file.url | imagePipe" />                   
+                     </div>
+                     <div class = "box-title">
+                        <div class="display-4 md-header" [innerHTML] = "bundle.fields.name" style = "font-size: 30px;font-weight: 700"></div>
+                    </div>
+                    <div class = "row box-title">
+                        <div class ="col-3 starting-at">
+                         Starting at
+                        </div>
+                        <div class ="col-9 dollar-col">
+                           <div class="first-promo-line color-font dollar-text" [innerHTML] = "bundle.fields.tag"></div>
+                         </div>
+                      </div> 
+                    <div class = "bundle-desc">
+                        <div class="banner-text"  [innerHTML] = "bundle.fields.shortDesc | richTextPipe"></div>
+                    </div>
+                    <div class = "row bottom-arrow" (click) = "toggleBundle()">
+                        <div class = "col-md-12" style = "text-align:center;width: 100%;font-size: 30px;">
+                                <i class="fa fa-angle-down"></i>
+                        </div>                           
+                    </div>                    
+                    <div class = "bundle-list">                  
+                        <ul class="list-group list-group-flush">
+                              <li *ngFor = "let feature of bundle.fields.list" class="list-group-item bundleItem"> 
+                                      <div class = "row">
+                                              <div class = "col-2" style = "text-align: right">
+                                                    <i [ngClass] = "feature.fields.fontAwesome"></i>
+                                              </div>
+                                              <div class = "col-10 banner-text" style = "font-weight:500;" [innerHTML] = "feature.fields.title | richTextPipe">                                      
+                                              </div>
+                                      </div>                        
+                              </li>
+                        </ul> 
+                    </div> 
+                 </div>
+
+
+
+     <div class = "col-md-8">
+        <div class = "row">
+            <div class = "col-md-12 light-font standard-theme box-title">
+                <h1 [innerHTML] = "bundle?.fields.associate.fields.title | richTextPipe"
+                class="display-4 lg-header" ></h1>
+                <h1 [innerHTML] = "bundle?.fields.associate.fields.subTitle | richTextPipe" 
+                class="display-4 box-sub-title-text color-font bottom-line"></h1>                                    
+            </div>
+            <div class = "col-md-12 color-theme-opacity" style = "padding-right: 5%;padding-left: 5%;padding-top: 3%;">
+                    <h1 [innerHTML] = "bundle?.fields.associate.fields.content | richTextPipe"
+                    class="display-4 point-font"></h1>                                                        
+            </div>
+          </div>
+          <div>
+                <project-details-form [thankYou] = 'bundle?.fields.associate2' [order] = 'true'></project-details-form>
+          </div>        
+     </div>
+    </div>   
+
+
+
+    
+       

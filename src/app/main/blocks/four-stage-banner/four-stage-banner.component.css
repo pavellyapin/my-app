@@ -1,0 +1,21 @@
+
+    .banners-row {
+        padding: 2%;
+    }
+
+    .banner-col {
+        padding:0;
+    }
+
+    .process-banner {
+        background-color:rgba(247, 206, 148, 0.2);
+        border-right-style:solid;
+        border-right-width: 7px;
+        border-color:rgba(74, 74, 75, 0.2);
+    }
+    .banner-text {
+        padding-bottom: 10%;
+        padding-left: 5%;
+        padding-top: 5%;
+    }
+

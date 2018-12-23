@@ -1,0 +1,10 @@
+::ng-deep p {
+    margin:0px;
+}
+
+.bundleBanner:hover {
+}
+
+.bundleItem:hover {
+    opacity: 0.5;
+}

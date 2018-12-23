@@ -1,0 +1,25 @@
+.row {width:100%;} 
+.navbar {
+  display:none; 
+  text-align:center;
+} 
+
+a {
+  color : #ffffff !important;
+}
+
+a:hover {
+  opacity:1;
+  transition: color 0.7s ease;
+  color : #efa937;
+}
+
+.active {    
+  color: #efa937;
+}
+
+.navbar {
+  border-color:rgba(247, 205, 148, 0.5);
+  border-bottom-style: solid;
+  border-width: 4px;
+}

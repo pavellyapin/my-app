@@ -1,0 +1,58 @@
+.main-image {
+    z-index: 1;
+    position: relative;
+    width:100%;
+ }
+.main-text {
+   z-index: 3;
+   position: absolute;
+   padding-top:10%;
+   width:100%;
+    }
+
+    .bottom-line::after {
+        width: 100%;
+        margin-left: 0%;
+    
+    }
+
+    .bottom-line-ci::after {
+        background:#5f759a;   
+    }
+
+    .bottom-line-rbc::after {
+        background:#006ac1;   
+    }
+
+    .bottom-line-yorku::after {
+        background: #e21e3a;   
+    }
+
+    .bottom-line-aerosoft::after {
+        background: #7e807f;   
+    }
+
+    .bottom-line-wcg::after {
+        background: #c00f33;   
+    }
+
+    .ci {
+        color: #5f759a !important;
+    }
+
+    .rbc {
+        color: #006ac1 !important;
+    }
+
+    .yorku {
+        color: #e21e3a!important;
+    }
+
+    .aerosoft {
+        color: #7e807f!important;
+    }
+
+    .wcg {
+        color: #c00f33!important;
+    }
+    

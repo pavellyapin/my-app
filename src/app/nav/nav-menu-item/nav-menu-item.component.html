@@ -1,0 +1,25 @@
+<div class = "row menu-item-container">
+    <div class = "row">
+            <div *ngIf = "showArow" class = "col-md-4" style="max-width: 30px;opacity: 0.5;">
+                    <i class="fa fa-angle-down" aria-hidden="true"> </i>
+            </div>
+    </div>
+    <div class = "col-md-12">
+            <div>
+                    <div class = "expandMenu" 
+                            [@menuClick] = "state">
+                      <button *ngFor="let option of menuItem.fields.subOptions" class="dropdown-item">
+                            <h1 class="display-4 sub-menu-option">{{option.fields.name}}</h1>
+                       </button>
+                    </div>
+                    
+                        <div (click) = "clickEvent()">                                        
+                            <h1 class="display-4 nav-menu-option">
+                                  <a [routerLink]="routerLink" class = "nostyle menu-a" routerLinkActive="active">
+                                  {{menuItem.fields.name}} 
+                                  </a></h1> 
+                        </div>
+                    
+            </div>
+    </div>
+</div>  

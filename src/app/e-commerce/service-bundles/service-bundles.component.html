@@ -1,0 +1,65 @@
+   
+<div class = "row bundles-row" style = "padding-bottom: 5%;" myMatchHeight="bundle-desc">
+    <div *ngFor = "let bundle of serviceBundles?.fields.list" 
+            class="col-md-3 bundleBanner" 
+                style = "cursor: pointer;"
+                (click)="navigate(bundle.fields.type)">
+               
+          <div class = "banner-image" style = "padding-top: 10%;"> 
+              <embed *ngIf = "showSVG" type="image/svg+xml" [src]="bundle.fields.image?.fields.file.url | imagePipe" />   
+              <img *ngIf = "!showSVG" [src]="bundle.fields.image?.fields.file.url | imagePipe" />                   
+         </div>
+         <div style = "width: 100%;padding-left: 15%;padding-right: 15%;padding-top: 3%;padding-bottom: 3%;"> 
+            <img src="assets/line.svg" />                   
+       </div>
+         <div class = "box-title">
+            <h1 class="display-4 md-header dark-font" [innerHTML] = "bundle.fields.name" style = "font-size: 30px;font-weight: 700"></h1>
+        </div>
+        <div class = "row box-title">
+            <div class ="col-4 starting-at">
+             Starting at
+            </div>
+            <div class ="col-8 dollar-col">
+               <div class="color-font dollar-text" [innerHTML] = "bundle.fields.tag"></div>
+             </div>
+          </div> 
+          <div class = "row" style = "padding-right: 3%;">
+            <div class ="col-12 starting-at color-font">
+             Monthly Options
+            </div>
+          </div> 
+        <div class = "bundle-desc">
+            <div class="banner-text"  [innerHTML] = "bundle.fields.shortDesc | richTextPipe"></div>
+        </div>
+        <div class = "bundle-list">                  
+            <ul class="list-group list-group-flush">
+                  <li *ngFor = "let feature of bundle.fields.list" class="list-group-item bundleItem"> 
+                          <div class = "row">
+                                  <div class = "col-2" style = "text-align: right;">
+                                        <i [ngClass] = "feature.fields.fontAwesome"></i>
+                                  </div>
+                                  <div class = "col-10 banner-text" style = "font-weight:500;" [innerHTML] = "feature.fields.title | richTextPipe">                                      
+                                  </div>
+                          </div>                        
+                  </li>
+            </ul> 
+        </div>
+        <div class = "row" style = "position: absolute;bottom: 0;width: 100%;padding-bottom: 20px;">
+            <div class = "col-md-12 box-title">
+                     <button mat-stroked-button
+                     [routerLink]="'/ordernow/' + bundle.fields.type" 
+                     class="color-theme"
+                     style = "border-radius:5px;padding-top:5px;padding-bottom: 5px;padding-left:5%;padding-right:5%;border-style: none">                           
+                            <div class="banner-text color-theme light-font" >
+                              <i class = "fa fa-shopping-cart" style = "padding-right: 5px;font-size: 20px"></i>
+                              More Info</div>                                
+                     </button>                                                                                   
+             </div>
+        </div>  
+     </div>
+    </div>   
+
+
+
+    
+       

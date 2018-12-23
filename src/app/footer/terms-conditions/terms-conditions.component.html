@@ -1,0 +1,18 @@
+<div *ngIf="loading" class = "load-spinner">
+    <mat-spinner ></mat-spinner>
+ </div> 
+ <div  [hidden]="loading"> 
+         <div >
+             <img  [src]="termsConditionsPageContent?.fields.image.fields.file.url | imagePipe" style = "width: 100%" (load)="onLoad()"> 
+         </div>
+  </div>
+  <div class = "row" >
+      <div class = "col-md-12" style = "padding-top: 1%;padding-bottom: 1%;">
+               <h1 [innerHTML] = "termsConditionsPageContent?.fields.subTitle | richTextPipe" 
+                    class="display-4 box-content-text color-font" style = "padding-left: 20%;"></h1>
+               <h1 [innerHTML] = "termsConditionsPageContent?.fields.title | richTextPipe" 
+                    class="display-4 box-title lg-thin-header" style = "padding-bottom: 1%;"></h1>
+              <h1  [innerHTML] = "termsConditionsPageContent?.fields.content | richTextPipe" 
+                    class="display-4 box-content-text" style = "padding-left: 5%;padding-right: 5%;"></h1>
+      </div>
+    </div> 

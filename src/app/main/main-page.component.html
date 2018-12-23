@@ -1,0 +1,65 @@
+<main role="main"> 
+        <main-promo [pageContent]='mainPageContent'></main-promo>  
+        <div class="row">
+            <div class="col-md-12 box-title"> 
+                <h1 [innerHTML] = "mainPageContent?.fields.firstBox.fields.title | richTextPipe" class="display-4 lg-header bottom-line"></h1>
+            </div>
+        </div>    
+        <div class="row">
+               <div class="col-md-6" style = "padding:0%;">
+                  <div>                  
+                        <div *ngFor = "let point of keyPoints?.fields.list" class="point-font" style = "padding-top:2%;"> 
+                                <div class = "row">
+                                        <div class = "col-2" style = "text-align: right">
+                                              <i [ngClass]="point.fields.fontAwesome"></i>
+                                        </div>
+                                        <div [innerHTML] = "point.fields.title | richTextPipe"
+                                                class = "col-10" style = "padding:0%;">                                        
+                                        </div>
+                                </div>                        
+                        </div>
+                 </div>    
+               </div>
+                <div class="col-md-6 scroll-to">                        
+                        <img  [src]="mainPageContent?.fields.firstBox.fields.image.fields.file.url | imagePipe" style = "width: 100%;">
+                </div>    
+        </div>
+        <div class = "row">
+                        <div class = "col-md-12 light-font standard-theme box-title">
+                            <h1 [innerHTML] = "mainPageContent?.fields.spaPromo?.fields.title | richTextPipe" 
+                            class="display-4 lg-header" ></h1>
+                            <h1 [innerHTML] = "mainPageContent?.fields.spaPromo?.fields.subTitle | richTextPipe" 
+                            class="display-4 box-sub-title-text color-font bottom-line"></h1>                                    
+                        </div>
+        </div> 
+        <div class = "row" >
+                        <div class = "col-md-12" style = "padding-top: 1%;padding-bottom: 1%;">
+                                 <h1 [innerHTML] = "mainPageContent?.fields.spa.fields.subTitle | richTextPipe" 
+                                      class="display-4 box-content-text color-font" style = "padding-left: 20%;"></h1>
+                                 <h1 [innerHTML] = "mainPageContent?.fields.spa.fields.title | richTextPipe" 
+                                      class="display-4 box-title lg-thin-header" style = "padding-bottom: 1%;"></h1>
+                                <h1  [innerHTML] = "mainPageContent?.fields.spa.fields.content | richTextPipe" 
+                                      class="display-4 box-content-text spa-content"></h1>
+                        </div>
+        </div>
+               <spa-banner></spa-banner> 
+               <div class = "row box-divider">
+                        <div class = "col-md-12">
+                                 <img  src="assets/divider-01.png" style="width: 100%;">
+                        </div>                         
+                </div>
+               <div class = "row" style = "padding-bottom:5%;">
+                        <div class = "col-md-12 color-font standard-theme box-title">
+                            <h1 [innerHTML] = "mainPageContent?.fields.aboutCompany.fields.title | richTextPipe" class="display-4 md-header"></h1>                                     
+                        </div>                
+                         <div class = "col-md-12 light-font standard-theme box-title">
+                            <h1 [innerHTML] = "mainPageContent?.fields.aboutCompany.fields.subTitle | richTextPipe" class="display-4 lg-header"></h1>                                     
+                         </div> 
+                        <div class = "col-md-12 light-font standard-theme box-title aboutContent" style = "padding-bottom:3%;">
+                                <h1 [innerHTML] = "mainPageContent?.fields.aboutCompany.fields.content | richTextPipe" class="display-4 box-content-text"></h1>                                     
+                        </div>
+                </div>
+                <featured-client [pageContent]='mainPageContent' [clientPoints] = 'clientPoints'></featured-client>
+                <portfolio-row class = "compareTo"></portfolio-row>
+                <road-to-design [pageContent]='mainPageContent'></road-to-design>
+  </main>
