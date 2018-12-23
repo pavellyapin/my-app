@@ -1,0 +1,61 @@
+
+<div *ngIf="loading" class = "load-spinner">
+  <mat-spinner ></mat-spinner>
+</div> 
+<div [hidden]="loading">           
+               <div  class = "row" style="padding:0px;">
+                       <div class = "col-md-5 box-title" style="padding:0px;padding-top: 10%;">
+                       <h1 class="display-4 first-promo-line dark-font" [innerHTML] = "bigDataPageContent?.fields.promo.fields.title | richTextPipe"></h1> 
+                       <h1 [innerHTML] = "bigDataPageContent?.fields.promo.fields.subTitle | richTextPipe" 
+                       class="display-4 box-content-text color-font" style = "padding-left: 20%;"></h1>
+                       <h1  [innerHTML] = "bigDataPageContent?.fields.promo.fields.content | richTextPipe" 
+                       class="display-4 box-content-text spa-content"></h1>                    
+                       </div>
+                       <div class = "col-md-7 box-title" style="padding:0px;">
+                        <img  [src]="bigDataPageContent?.fields.promo.fields.image?.fields.file.url | imagePipe" (load)="onLoad()"/>
+                       </div>  
+               </div>
+       <div >              
+                   
+       </div>
+</div>
+<portfolio-row></portfolio-row>
+  <div class = "row standard-theme-opacity">
+                <div class = "col-md-12" style = "padding-left: 10%;padding-right: 10%;">
+                    <img  [src]="cmsInfo?.fields.image?.fields.file.url | imagePipe" style="width: 100%;">
+                </div>   
+  </div>
+  <div class = "row standard-theme-opacity" style = "padding-right: 5%;padding-left: 5%; padding-bottom: 5%;">
+                <div *ngFor = "let cmsPoint of cmsInfo?.fields.list" class="col-md-3 spaBanner">
+                  <div>
+                      <div class = "banner-image">
+                         <img [src]="cmsPoint.fields.image?.fields.file.url | imagePipe" style="width: 100%;"/>               
+                     </div> 
+                     <div class = "box-title">
+                        <h1 class="display-4 md-header bottom-line" [innerHTML] = "cmsPoint.fields.title | richTextPipe"></h1>
+                    </div>
+                     <h1 class="display-4 point-font box-title" [innerHTML] = "cmsPoint.fields.shortDesc | richTextPipe"></h1>
+            </div>
+      </div>
+  </div> 
+  <portfolio-row></portfolio-row>
+<div class = "row">
+                <div class = "col-md-12 standard-theme-opacity" style = "padding-top:5%;padding-left: 10%;padding-right: 10%;">
+                    <img  [src]="analyticsInfo?.fields.image?.fields.file.url | imagePipe" style="width: 100%;">
+                </div>   
+  </div>
+  <div class = "row standard-theme-opacity" style = "padding-top:5%;padding-right: 5%;padding-left: 5%; padding-bottom: 5%;">
+                <div *ngFor = "let analytic of analyticsInfo?.fields.list" class="col-md-3">
+                  <div>
+                      <div class = "banner-image">
+                         <img [src]="analytic.fields.image?.fields.file.url | imagePipe" style="width: 100%;"/>               
+                     </div> 
+                     <div class = "box-title">
+                        <h1 class="display-4 md-header bottom-line" [innerHTML] = "analytic.fields.title | richTextPipe"></h1>
+                    </div>
+                     <h1 class="display-4 point-font box-title" [innerHTML] = "analytic.fields.shortDesc | richTextPipe"></h1>
+            </div>
+      </div>
+  </div> 
+
+  <portfolio-row></portfolio-row>

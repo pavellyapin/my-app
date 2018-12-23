@@ -1,0 +1,37 @@
+
+    #main-image {
+        z-index: 5;
+        position: relative;
+        width:100%;
+       }
+       #main-text {
+          position: absolute;
+          padding-top:13%;
+          padding-bottom:300px;
+          width:100%;          
+         }
+   
+     .nav-button {
+       width:200px;
+       text-align:center;
+       padding-top:10px;
+       padding-bottom:5px;
+       font-size : 18px;      
+     }
+
+     .cms-image {
+        border-left:#efa937;
+        border-left-style: solid;
+        border-width: 5px;
+    }
+
+    .spaBanner {
+       padding-top: 2%;
+       padding-bottom: 2%;
+    }
+    
+    .banner-image {
+        padding-left: 32%;
+        padding-right: 32%;
+        padding-bottom: 5%;
+    }
