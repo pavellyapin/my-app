@@ -1,0 +1,30 @@
+   
+<div class = "row" style = "padding-right: 5%;padding-left: 5%; padding-top: 10%;">
+      <div class = "col-md-8">
+         <div class = "row">
+             <div class = "col-md-12 light-font standard-theme box-title">
+                 <h1 [innerHTML] = "contactPageContent?.fields.title | richTextPipe"
+                 class="display-4 lg-header" ></h1>
+                 <h1 [innerHTML] = "contactPageContent?.fields.subTitle | richTextPipe" 
+                 class="display-4 box-sub-title-text color-font bottom-line"></h1>                                    
+             </div>
+             <div class = "col-md-12 color-theme-opacity" style = "padding-right: 5%;padding-left: 5%;padding-top: 3%;">
+                        <h1 [innerHTML] = "contactPageContent?.fields.content | richTextPipe"
+                        class="display-4 point-font"></h1>                                                        
+             </div>
+           </div>
+           <div>
+                 <project-details-form [thankYou] = 'contactPageContent?.fields.thankYou'></project-details-form>
+           </div>        
+      </div>
+      <div class="col-md-4">
+                <div *ngFor = "let bundle of serviceBundles?.fields.list"  class = "row">
+                        <service-bundle-banner [bundle]='bundle' style = "width: 100%;"></service-bundle-banner>
+                </div>
+          </div>
+     </div>   
+ 
+ 
+ 
+     
+        

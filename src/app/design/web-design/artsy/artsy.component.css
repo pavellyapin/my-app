@@ -1,0 +1,14 @@
+.artsy-image {
+    border-left:#efa937;
+    border-left-style: solid;
+    border-width: 10px;
+}
+
+.spaBanner {
+    border-right:#efa937;
+    border-right-style: solid;
+    border-width: 5px;
+    background-color:rgba(247, 206, 148, 0.2);
+    margin-top: 5%;
+}
+

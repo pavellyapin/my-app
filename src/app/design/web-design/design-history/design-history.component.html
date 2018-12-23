@@ -1,0 +1,15 @@
+<div class = "row">
+    <div class = "col-md-6" style = "padding-top: 5%;padding-bottom: 3%;opacity:0" [@showFeaturedText] = "state">
+        <div class = "artsy-image">
+            <img  [src]="pageContent?.fields.designHistory.fields.image?.fields.file.url | imagePipe" style = "width: 100%;">
+        </div>             
+      </div>
+    <div class = "col-md-6" style = "padding-top: 5%;padding-bottom: 3%;opacity:0" [@showFeaturedImage] = "state">
+             <h1 [innerHTML] = "pageContent?.fields.designHistory.fields.title | richTextPipe"
+              class="display-4 box-content-text color-font" style = "padding-left: 20%;"></h1>
+             <h1 [innerHTML] = "pageContent?.fields.designHistory.fields.subTitle | richTextPipe" 
+              class="display-4 box-title lg-thin-header" style = "padding-bottom: 5%;"></h1>
+            <h1 [innerHTML] = "pageContent?.fields.designHistory.fields.content | richTextPipe"  
+              class="display-4 box-content-text bottom-line" style = "padding-right:5%;padding-left:5%;"></h1>                                   
+    </div>
+</div> 

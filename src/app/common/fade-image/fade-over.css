@@ -1,0 +1,15 @@
+       
+    .image {
+      opacity: 1;
+      transition: 1.5s ease;
+      cursor: pointer;
+    }
+
+    .hover-over-container:hover .image {
+      opacity: 0.3;
+    }
+    
+    .hover-over-container:hover .image-frame2 {
+      opacity: 1;
+    }
+    

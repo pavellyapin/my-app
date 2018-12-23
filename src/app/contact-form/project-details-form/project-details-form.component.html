@@ -1,0 +1,107 @@
+
+                           <div *ngIf = "order" class = "color-theme-opacity" style = "width: 100%;padding-left: 45%; padding-bottom: 2%;">
+                                 <app-buy-button></app-buy-button>
+                            </div>
+                            <div *ngIf = "!msgSent" class = "form-fields color-theme-opacity" style = "padding-bottom: 2%;">
+                                <div class = "row" style = "padding-top:20px">
+                                    <div class = "col-md-6">
+                                            <mat-form-field appearance="outline" class = "contact-field" style = "width: 100%;">
+                                                    <input matInput [formControl]="nameFormControl" style = "font-size: 12px;">
+                                                    <mat-hint class = "color-font" style = "font-size: 10px;">Name</mat-hint>
+                                                    </mat-form-field>
+                                    </div> 
+                                    <div class = "col-md-6">
+                                        <mat-form-field appearance="outline" class = "contact-field" style = "width: 100%;">
+                                                <input matInput [formControl]="emailFormControl" style = "font-size: 12px;">
+                                                <mat-hint class = "color-font" style = "font-size: 10px;">Email</mat-hint>
+                                                </mat-form-field>
+                                </div>                                
+                                </div>
+                                <div class="row">
+                                    <div class = "col-md-6">
+                                            <mat-form-field appearance="outline" class = "contact-field" style = "width: 100%;">
+                                                    <mat-select [formControl]="firstSiteFormControl" placeholder="Is this your first site?" style = "font-size: 12px;">
+                                                      <mat-option *ngFor="let firstSite of firstSiteOptions" [value]="firstSite.value">
+                                                        {{firstSite.viewValue}}
+                                                      </mat-option>
+                                                    </mat-select>
+                                                  </mat-form-field>
+                                    </div>
+                                    <div class = "col-md-6">
+                                            <mat-form-field appearance="outline" class = "contact-field" style = "width: 100%;">
+                                                    <input matInput [formControl]="cityFormControl">
+                                                    <mat-hint class = "color-font" style = "font-size: 10px;">Your City</mat-hint>
+                                            </mat-form-field> 
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class = "col-md-6">
+                                            <mat-form-field appearance="outline" class = "contact-field" style = "width: 100%;">
+                                                    <mat-select [formControl]="timelineFormControl" placeholder="What is your timeline?" style = "font-size: 12px;">
+                                                      <mat-option *ngFor="let timeline of timelineOptions" [value]="timeline.value">
+                                                        {{timeline.viewValue}}
+                                                      </mat-option>
+                                                    </mat-select>
+                                                  </mat-form-field>
+                                    </div>
+                                    <div class = "col-md-6">
+                                        <mat-form-field appearance="outline" class = "contact-field" style = "width: 100%;">
+                                                <mat-select [formControl]="shopifyFormControl" placeholder="Interested in our Shopify plugin?" style = "font-size: 12px;"> 
+                                                  <mat-option *ngFor="let shopify of shopifyOptions" [value]="shopify.value">
+                                                    {{shopify.viewValue}}
+                                                  </mat-option>
+                                                </mat-select>
+                                              </mat-form-field>
+                                </div>
+                                    <div class = "col-md-12" style = "padding-left: 5%;padding-right: 5%;">
+                                        <mat-form-field appearance="outline" class = "contact-field" style = "width: 100%;">
+                                                    <textarea matInput [formControl]="msgFormControl" placeholder="Tell us something about your project" style = "font-size: 12px;"></textarea>
+                                            </mat-form-field>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class = "col-md-4">
+                                            <mat-form-field appearance="outline" class = "contact-field" style = "width: 100%;">
+                                                    <mat-select [formControl]="howFormControl" placeholder="How did you hear about us?" style = "font-size: 12px;">
+                                                      <mat-option *ngFor="let how of howOptions" [value]="how.value">
+                                                        {{how.viewValue}}
+                                                      </mat-option>
+                                                    </mat-select>
+                                                  </mat-form-field>
+                                    </div>
+                                    <div class = "col-md-4">
+                                        <mat-form-field appearance="outline" class = "contact-field" style = "width: 100%;">
+                                            <input matInput [formControl]="phoneFormControl" style = "font-size: 12px;">
+                                            <mat-hint class = "color-font" style = "font-size: 10px;">Phone</mat-hint>
+                                            </mat-form-field>
+                                  </div>
+                                  <div class = "col-md-4">
+                                      <input class = "banner-text color-font" 
+                                      style = "border-style: none;width: 35%;border-radius: 5px;text-align: center" 
+                                      [(colorPicker)]="color" 
+                                      [style.background]="color" 
+                                      value = "Pick a color"/> 
+                                  </div>
+                                </div>
+                              </div>
+                              <div class = "row" *ngIf = "!msgSent && !order">
+                                  <div class = "col-md-12 color-theme-opacity" style="text-align: center;padding-bottom: 2%">
+                                      <button mat-flat-button (click) ='sendMsg()'>Send</button>
+                                  </div>
+                              </div>    
+                                <div class = "row" *ngIf = "msgSent" style = "padding-top: 10%;">
+                                  <div class = "col-md-12 box-title" style = "width: 100%">
+                                      <h1 [innerHTML] = "thankYou?.fields.title | richTextPipe"
+                                          class="display-4 box-sub-title-text color-font"></h1>
+                                      <h1 [innerHTML] = "thankYou?.fields.subTitle | richTextPipe"
+                                          class="display-4 dark-font" style = "font-weight: 300"></h1>
+                                  </div>
+                                  <div class = "col-md-12 box-title color-font" style = "width: 100%;padding-top:2%;" >
+                                      <app-social></app-social>
+                                  </div> 
+                                </div> 
+                                 
+                           
+                                                            
+
+                                

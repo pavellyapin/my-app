@@ -1,0 +1,10 @@
+
+
+<div class = "bottom-button" [@hoverImage2]="state" (mouseenter) ="mouseEnter('expand')" (mouseleave) ="mouseLeave('expand')">
+    <i class="fa fa-search fa-1x"></i>
+</div>
+<div class = "hover-over-container" (mouseenter) ="mouseEnter('item')" (mouseleave) ="mouseLeave('item')" (click)="openDialog()">
+    <img  src="assets/image-frame2.svg" class="image-frame"> 
+    <img  [src]="myImageUrl" class="image">
+</div>
+

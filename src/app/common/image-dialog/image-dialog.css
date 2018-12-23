@@ -1,0 +1,45 @@
+
+  
+    .image-frame {
+      z-index: 4;
+      position: absolute;
+      width: 85%;
+      left:5%;
+  }
+      
+  .image {
+    z-index: 1;
+    opacity: 1;
+    display: block;
+    box-sizing: border-box;
+    padding-top:5%;
+    padding-left:10%;
+    padding-right:10%;
+    width: 95%;
+    height: auto;
+    transition: 1.5s ease;
+    backface-visibility: hidden;
+  }
+    
+    .bottom-button {
+      position:absolute;
+      width: 77%;
+      margin-left: 5%;
+      margin-top:55%;
+      padding-top: 3%; 
+      padding-bottom: 3%;      
+      z-index:2;
+      text-align:center;    
+      color:#FFFFFF;    
+      background-color:#3b505f;      
+    }
+
+    .bottom-button:hover {
+      cursor: pointer;
+    }
+
+    .hover-over-container:hover {
+      cursor: pointer;
+    }
+
+    

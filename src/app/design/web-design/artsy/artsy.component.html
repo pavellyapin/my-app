@@ -1,0 +1,29 @@
+<div class = "row">
+    <div class = "col-md-6" style = "padding-top: 5%;padding-bottom: 3%;opacity:0" [@showFeaturedText] = "state">
+             <h1 [innerHTML] = "pageContent?.fields.artsyPromo.fields.title | richTextPipe"
+              class="display-4 box-content-text color-font" style = "padding-left: 20%;"></h1>
+             <h1 [innerHTML] = "pageContent?.fields.artsyPromo.fields.subTitle | richTextPipe" 
+              class="display-4 box-title lg-thin-header" style = "padding-bottom:5%;"></h1>
+            <h1 [innerHTML] = "pageContent?.fields.artsyPromo.fields.content | richTextPipe"  
+              class="display-4 box-content-text bottom-line" style = "padding-right:5%;padding-left:5%;"></h1>                                   
+    </div>
+    <div class = "col-md-6" style = "padding-top: 5%;padding-bottom: 3%;opacity:0" [@showFeaturedImage] = "state">
+      <div class = "artsy-image">
+          <img  [src]="pageContent?.fields.artsyPromo.fields.image?.fields.file.url | imagePipe" style = "width: 100%;">
+      </div>             
+    </div>
+</div> 
+  <div class = "row artsy-row" style = "padding-right: 10%;padding-left: 10%">
+      <div *ngFor = "let banner of banners?.fields.list" class="col-md-4 spaBanner" style = "cursor: pointer" (click) = "navigate()">
+        <div>
+            <div class = "banner-image">
+                <embed *ngIf = "showSVG" type="image/svg+xml" [src]="banner.fields.image?.fields.file.url | imagePipe" />   
+                <img *ngIf = "!showSVG" [src]="banner.fields.image?.fields.file.url | imagePipe" />                 
+           </div> 
+           <div class = "box-title">
+              <h1 class="display-4 md-header bottom-line" [innerHTML] = "banner.fields.title | richTextPipe"></h1>
+          </div>
+           <h1 class="display-4 point-font banner-text box-title" [innerHTML] = "banner.fields.shortDesc | richTextPipe"></h1>
+        </div>
+       </div>
+      </div>  
