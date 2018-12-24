@@ -7,8 +7,7 @@ import { featuredTextAnimation } from '../../common/animations';
 
 @Component({
   selector: 'road-to-design',
-  templateUrl: './road-to-design.component.html',
-  styleUrls: ['./road-to-design.component.css']
+  templateUrl: './road-to-design.component.html'
 })
 export class RoadToDesignComponent implements OnInit {
 
