@@ -8,7 +8,7 @@
         </div>
 </div>
 <div class="row" style = "padding-left: 10%;padding-right: 10%">
-            <div *ngFor = "let post of blogPosts" class="col-md-4 image" style= "padding-left:5%;padding-right: 5%">
+            <div *ngFor = "let post of blogPosts" class="col-md-4 image" style= "padding-left:1%;padding-right: 1%">
                 <a [routerLink]="'/blog/' + post.fields.name">
                     <fade-over-image [myImageUrl]="post.fields.banner?.fields.file.url"></fade-over-image>
                 </a>                
@@ -17,7 +17,7 @@
                                 [innerHTML] = "post.fields.title | richTextPipe"></div>                        
                   </div>  
                       <div class = "row">
-                              <div class="display-4 mini-font" 
+                              <div class="display-4 mini-font" style = "opacity:0.6;"
                               [innerHTML] = "post.fields.shortDesc | richTextPipe"></div>                        
                 </div>  
   
@@ -30,11 +30,10 @@
 </div>  
 <div class="standard-theme">
         
-       <div class = "row bottom-line" style = "padding-left:5%;padding-right:5%;padding-top: 1%;">
-          <div class="col-md-5">
-                 <img style = "width: 60%;padding-left: 20%;" src="assets/footer-splidoo-full-logo.png">
-                 <div style = "padding-left: 15%;padding-right: 15%;padding-top: 2%;">                 
-                 <h1 class="display-4 footer-font" 
+       <div class = "row bottom-line footer-cont">
+          <div class="col-md-4">
+                 <div style = "padding-left: 5%;padding-top: 2%;">                 
+                 <h1 class="display-4 footer-font" style = "opacity:0.6;"
                  [innerHTML] = "footerContent?.fields.leftBox.fields.shortDesc | richTextPipe">
                  </h1>    
                  <h1 [innerHTML] = "footerContent?.fields.leftBox.fields.subTitle | richTextPipe" 
@@ -46,7 +45,7 @@
                                     <i [ngClass] = "promise.fields.fontAwesome"></i>
                             </div>
                             <div class = "col-8">
-                                            <h1 [innerHTML] = "promise?.fields.title | richTextPipe" 
+                                            <h1 [innerHTML] = "promise?.fields.title | richTextPipe" style = "opacity:0.6;"
                                                 class="display-4 footer-font"></h1>
                             </div>  
                         </div>
@@ -54,17 +53,27 @@
                     </div>
                    </div>                   
           </div>
-          <div class="col-md-3">
-            <h1 class="display-4 footer-font color-font" style="font-weight: 500">Did you like our site?</h1>
-               <simple-contact-form></simple-contact-form>     
+          <div *ngFor = "let column of siteMap?.fields.list"class="col-md-2 sitemap-col">
+                <a *ngFor = "let link of column.fields.list" 
+                    [routerLink]="link.fields.path" 
+                    (click)="siteMapClick()"
+                    class = "nostyle color-font">        
+                <h1 [ngClass] = "link.fields.class" 
+                     class="display-4 footer-font color-font"
+                     [innerHTML] = "link?.fields.title | richTextPipe"></h1>
+                </a>
           </div>
-          <div class="col-md-4" style = "padding-top: 5%; padding-left:7%;">
-           <h1 class="display-4 footer-font" 
+          <div class="col-md-2" style = "padding-bottom: 5%;">
+           <h1 class="display-4 footer-font" style = "padding-top: 2%;opacity:0.6;"
                [innerHTML] = "footerContent?.fields.rightBox.fields.content | richTextPipe"></h1> 
            <div style = "display: inline" class = "color-font">
                         <app-social></app-social>
           </div>  
           </div>
+          <div class="col-md-12 footer-logo" style = "padding-bottom: 5%;">
+            <img style = "width: 100%;" src="assets/splidoo-full-logo-dark.png">
+        </div>
+                 
        </div>
        <div class = "row">
                 <div class="col-md-12" style = "text-align: center;padding-bottom: 5%;">

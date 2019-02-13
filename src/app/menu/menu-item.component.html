@@ -17,7 +17,7 @@
                         
                             <div (click) = "clickEvent()">                                        
                                 <h1 class="display-4 menu-option">
-                                      <a [routerLink]="routerLink" class = "nostyle menu-a" routerLinkActive="active">
+                                      <a [routerLink]="routerLink" class = "nostyle menu-a" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
                                       {{menuItem.fields.name}} 
                                       </a></h1> 
                             </div>
