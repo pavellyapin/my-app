@@ -11,7 +11,7 @@
 .bottom-line::after {
     content: '';
     display: block;
-    margin-top: 5%;
+    margin-top: 1%;
     margin-bottom: 20px;
     margin-left: 0%;
     width: 100%;
@@ -35,10 +35,6 @@
     opacity: 1;
   }
 
-  div {
-      padding:0px;
-  }
-
   h1 {
     padding:0px;
     }
@@ -46,3 +42,22 @@
     ::ng-deep   p {
         margin-bottom: 5px !important;
     }
+
+    .sitemap-item {
+        opacity:0.6;
+    }
+
+    .sitemap-item:hover {
+        opacity:1;
+    }
+
+    .sitemap-header {
+        opacity:0.6;
+        padding-top: 5%;
+        color:white !important;
+    }
+
+    .sitemap-header:hover {
+        opacity:1;
+    }
+
